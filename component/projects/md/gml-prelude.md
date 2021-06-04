@@ -1,0 +1,1 @@
+A collection of scripts that enable functional programming approaches in GameMaker Studio 2. Examples of features supported by this library include iterators, higher-order functions, partial application, and simple monadic operations.

@@ -1,0 +1,11 @@
+#header {
+	text-align : center;
+}
+
+#header > h1 {
+	margin-bottom : 0px;
+}
+
+.date {
+	font-family : var(--font-mono);
+}

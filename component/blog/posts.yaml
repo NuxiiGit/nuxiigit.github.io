@@ -1,0 +1,10 @@
+- title: "Misusing Macros to Create Syntax Extensions in GameMaker Studio 2"
+  short-title: "GML Syntax Extensions"
+  desc: "Using bad practices, careful design and creativity, macros can become a powerful feature for introducing new syntax into GameMaker Language (GML)."
+  date:
+      day: 16
+      month: 12
+      year: 2020
+- title: "Test Page"
+- title: "Ideas for a New High-level Systems Programming Language"
+  short-title: "Ideas for Cosy"

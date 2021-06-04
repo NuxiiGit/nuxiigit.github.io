@@ -1,0 +1,18 @@
+body {
+	height : 100vh;
+}
+
+#avatar {
+	width : 15em;
+	--angle : -2deg;
+}
+
+.box {
+	width : 200px;
+	padding : 50px 10px;
+}
+
+.contact {
+	padding : 10px;
+}
+

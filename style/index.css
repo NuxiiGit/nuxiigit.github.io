@@ -1,0 +1,37 @@
+body {
+	height : 100vh;
+}
+
+#content {
+	margin : 0px 15%;
+}
+
+#title {
+	margin-top : 0px;
+}
+
+#title::after {
+	content : "nuxii";
+}
+
+#title:hover::after {
+	content : "katsaii";
+}
+
+#toolbar {
+	font-family : var(--font-mono);
+}
+
+#avatar {
+	width : 20em;
+	--angle : 2deg;
+}
+
+#jumbo {
+	width : 20em;
+}
+
+.box {
+	width : 300px;
+	padding : 50px 10px;
+}

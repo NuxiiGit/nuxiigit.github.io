@@ -1,0 +1,26 @@
+<%= $header %>
+<html <%= $lang %>>
+	<head>
+		<%= $meta %>
+		<link rel="stylesheet" href="/style/project.css">
+		<title>Projects</title>
+	</head>
+	<body>
+		<%= $homepage %>
+		<div id="content">
+			<div id="header">
+				<img id="avatar-top" class="anim-3d" src="/image/avatar/4.png" />
+				<h1>Project List</h1>
+			</div>
+			<p class="justify">This page lists various projects I have worked on, organised by most recent to least recent. Project information and links to source code are included whenever possible.</p>
+			<%= render_projects(project_info["projects"]) %>
+			<p class="justify">All projects listed are either personal projects, paid work, or notable academic assignments. Although many of the personal projects are not particularly useful, they are a result of technical challenges or interests that I want to showcase.</p>
+			<div id="footer" class="flex">
+				<div class="centre">
+					<img id="avatar-bot" class="anim-wobble" src="/image/avatar/8.png" />
+				</div>
+			</div>
+		</div>
+		<script src="/script/project.js"></script>
+	</body>
+</html>

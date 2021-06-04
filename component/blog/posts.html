@@ -1,0 +1,32 @@
+<%= $header %>
+<html <%= $lang %>>
+	<head>
+		<%= $meta %>
+		<link rel="stylesheet" href="/style/blog.css">
+		<title>Katblog</title>
+	</head>
+	<body>
+		<%= $homepage %>
+		<div id="content">
+			<div id="header">
+				<img id="avatar-top" class="anim-squish" src="/image/avatar/9.png" />
+				<h1>All Posts</h1>
+			</div>
+			<p class="justify">This page lists public blog posts, organised by most recent publish date.</p>
+			<div class="post">
+				dd-mm-yyyy title
+			</div>
+			<% posts.each do |x| %>
+				<% if x.key? "date" %>
+					<div class="post">
+						<%= render_date_mono x["date"] %>
+						<% title = x["title"] %>
+						<% short_title = (x.key? "short-title") ? x["short-title"] : title %>
+						<a href="/content/blog/post/<%= convert_id short_title -%>.html" <% if x.key? "desc" -%>title="<%= short_title %> -- <%= x["desc"] -%>"<% end -%>><%= title %></a>
+					</div>
+				<% end %>
+			<% end %>
+			<div id="footer"></div>
+		</div>
+	</body>
+</html>

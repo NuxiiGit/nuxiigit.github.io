@@ -1,0 +1,48 @@
+<%= $header %>
+<html <%= $lang %>>
+	<head>
+		<%= $meta %>
+		<link rel="stylesheet" href="/style/contact.css">
+		<title>Contact</title>
+	</head>
+	<body>
+		<%= $homepage %>
+		<div id="content" class="flex">
+			<div class="box">
+				<div class="centre">
+					<h1>Contact</h1>
+				</div>
+				<p class="justify">You can find me on any one of these platforms.</p>
+				<div class="flex">
+					<div class="contact centre">
+						<b>GitHub</b><br><a href="<%= $urls["github"] %>">/NuxiiGit</a>
+					</div>
+					<div class="contact centre">
+						<b>Twitter</b><br><a href="<%= $urls["twitter"] %>">@katsaii</a>
+					</div>
+					<div class="contact centre">
+						<b>Discord</b><br>katsaii#4528
+					</div>
+					<div class="contact centre">
+						<b>SoundCloud</b><br><a href="<%= $urls["soundcloud"] %>">/nuck-see</a>
+					</div>
+					<div class="contact centre">
+						<b>Newgrounds</b><br><a href="<%= $urls["newgrounds"] %>">@Katsaii</a>
+					</div>
+					<div class="contact centre">
+						<b>DeviantArt</b><br><a href="<%= $urls["deviantart"] %>">/katxaii</a>
+					</div>
+					<div class="contact centre">
+						<b>Tumblr</b><br><a href="<%= $urls["tumblr"] %>">@katxaii</a>
+					</div>
+					<div class="contact centre">
+						<b>Email</b><br><a href="<%= $urls["email"] %>">katsaiinuxii@gmail.com</a>
+					</div>
+				</div>
+			</div>
+			<div class="box centre">
+				<img id="avatar" class="anim-tilt" src="/image/avatar/10.png" />
+			</div>
+		</div>
+	</body>
+</html>
