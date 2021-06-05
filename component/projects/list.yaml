@@ -1,4 +1,13 @@
 projects:
+ - name: KatScript
+   website: null
+   begin: 2020
+   end: 2021
+   languages:
+    - Rust
+   roles:
+    - Research
+    - Development
  - name: nuxiigit.github.io
    begin: 2018
    languages:
@@ -6,9 +15,6 @@ projects:
     - JavaScript
     - HTML
     - CSS
-   roles:
-    - "Front End"
-    - "Back End"
  - name: gml-prelude
    end: 2020
    languages:
@@ -17,19 +23,12 @@ projects:
    end: 2020
    languages:
     - Python
- - name: go-scrape
-   end: 2020
-   languages:
-    - Go
  - name: undergrad-portfolio
    end: 2020
    languages:
     - Python
     - HTML
     - CSS
-   roles:
-    - "Front End"
-    - "Back End"
  - name: dot-edit
    begin: 2019
    end: 2020
@@ -47,14 +46,6 @@ projects:
     - Physics
     - Graphics
     - Integration
- - name: mixfix-expression-parser
-   end: 2019
-   languages:
-    - Rust
- - name: mpc-pls
-   end: 2019
-   languages:
-    - "Visual Basic .NET"
  - name: "LeJOS Robots"
    website: null
    end: 2019

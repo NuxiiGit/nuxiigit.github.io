@@ -1,4 +1,4 @@
-An educational graph theory application for computing common relation operations and graph traversals. A monadic recursive descent parser was created to enable graphs encoded in the Graphviz DOT script to be used with the application.
+An educational graph theory application for computing common relation operations and graph traversals. A monadic recursive descent parser was written so that graphs encoded in the Graphviz DOT script to be imported and exported using the application.
 
 Consider the following graph in a file named `graph.dot`
 ```text
