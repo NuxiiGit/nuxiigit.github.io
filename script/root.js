@@ -1,3 +1,9 @@
+fetch("/README.txt")
+		.then(data => data.text())
+		.then(text => {
+			console.log(text);
+		});
+
 const sound_src = "/audio/arp.wav";
 const sounds = [];
 const sound_count = 10;
@@ -53,6 +59,6 @@ if (darkmode == null) {
 		// thanks @Sidorakh
 		toggle_theme();
 	}
-} else if (darkmode == true) {
+} else if (darkmode == "true") {
 	toggle_theme();
 }
