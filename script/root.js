@@ -33,19 +33,26 @@ for (elem of elems) {
 	append_attribute(elem, "onmouseup", ";play_sound(1.1)");
 }
 
-/// Enables or disables dark mode.
-function enable_darkmode() {
+/// Toggles the current theme without affecting local storage.
+function toggle_theme() {
 	let root = document.documentElement;
 	root.classList.toggle("dark-mode");
-	let enabled = root.classList.contains("dark-mode");
-	if (enabled) {
-		window.localStorage.setItem("darkmode", true);
-	} else {
-		window.localStorage.removeItem("darkmode");
-	}
+	return root.classList.contains("dark-mode");
 }
 
-let darkmode = window.localStorage.getItem("darkmode");
-if (darkmode != null && darkmode) {
-	enable_darkmode();
+/// Enables or disables dark mode.
+function enable_darkmode() {
+	let enabled = toggle_theme();
+	window.localStorage.setItem("dark-mode", enabled);
+}
+
+let darkmode = window.localStorage.getItem("dark-mode");
+if (darkmode == null) {
+	if (window.matchMedia &&
+			window.matchMedia("(prefers-color-scheme: dark)").matches) {
+		// thanks @Sidorakh
+		toggle_theme();
+	}
+} else if (darkmode == true) {
+	toggle_theme();
 }
