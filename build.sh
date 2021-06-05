@@ -25,7 +25,7 @@ if [ "$1" == "submit" ]; then
 		git rm -r --cached .
 		git add .
 		git commit -m "published website"
-		git push "$COMMIT_REMOTE" gh-pages
+		git push "$COMMIT_REMOTE" gh-pages --force
 		git checkout "$CURRENT_BRANCH"
 	else
 		echo "make sure you are not on the gh-pages branch, and that there are no uncommitted changes"
