@@ -1,8 +1,10 @@
-# generate and preview the website
+# generate the website
 ruby main.rb
-python3 -m http.server 8888
-# commit changes to gh-pages branch
-if [ "$1" == "submit" ]; then
+if [ "$1" != "submit" ]; then
+	# preview the website
+	python3 -m http.server 8888
+else
+	# commit changes to gh-pages branch
 	if [ -z "$COMMIT_REMOTE" ]; then
 		COMMIT_REMOTE=origin
 	fi
