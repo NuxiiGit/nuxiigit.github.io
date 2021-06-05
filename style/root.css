@@ -308,7 +308,8 @@ p.justify {
 	text-indent : 2em;
 }
 
-.justify > p > img {
+.justify > p > img,
+.justify > p + div.centre {
 	display : block;
 	margin : 10px auto;
 }
