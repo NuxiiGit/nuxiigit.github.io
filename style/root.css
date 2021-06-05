@@ -225,6 +225,10 @@ img {
 	opacity : var(--image-opacity);
 }
 
+img#bulb {
+	width : 2.5em;
+}
+
 .centreing img, img.centreing {
 	display : block;
 	margin : 0 auto;
