@@ -32,3 +32,9 @@ for (elem of elems) {
 	append_attribute(elem, "onmousedown", ";play_sound(0.6)");
 	append_attribute(elem, "onmouseup", ";play_sound(1.1)");
 }
+
+/// Enables or disables dark mode.
+function enable_darkmode() {
+	let root = document.documentElement;
+	root.classList.toggle("dark-mode");
+}

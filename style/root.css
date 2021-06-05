@@ -15,20 +15,18 @@
 	--foreground : var(--colour-dark);
 	--background-2 : var(--colour-light-2);
 	--foreground-2 : var(--colour-dark-2);
+	--image-opacity : 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--colour-light : #f9f9f9b3;
-		--colour-light-2 : #eeeeeeb3;
-		--background : var(--colour-dark);
-		--foreground : var(--colour-light);
-		--background-2 : var(--colour-dark-2);
-		--foreground-2 : var(--colour-light-2);
-	}
-	img {
-		opacity : 70%;
-	}
+/* @media (prefers-color-scheme: dark) */
+:root.dark-mode {
+	--colour-light : #f9f9f9b3;
+	--colour-light-2 : #eeeeeeb3;
+	--background : var(--colour-dark);
+	--foreground : var(--colour-light);
+	--background-2 : var(--colour-dark-2);
+	--foreground-2 : var(--colour-light-2);
+	--image-opacity : 70%;
 }
 
 :root[debug=enable] * {
@@ -77,6 +75,12 @@ body {
 hr {
 	border-style : none;
 	border-top : 1px dotted var(--foreground);
+}
+
+button.unstyled {
+	border : none;
+	padding : 0;
+	background : none;
 }
 
 .anim-tilt {
@@ -218,6 +222,7 @@ hr {
 img {
 	max-width : 100%;
 	max-height : 100%;
+	opacity : var(--image-opacity);
 }
 
 .centreing img, img.centreing {
@@ -373,11 +378,11 @@ input[type='checkbox'] + label {
 	width : 100%;
 }
 
-input[type='checkbox'] + label::before {
+.collapsible > input[type='checkbox'] + label::before {
 	content : '[+] ';
 }
 
-input:checked + label::before {
+.collapsible > input:checked + label::before {
 	content : '[-] ';
 }
 
