@@ -1,1 +1,3 @@
-The result of a group project assignment where we were tasked to create a video game with networking and database connectivity.
+The result of a group project assignment where we were tasked to create a video game with networking and database connectivity. I was responsible for the implementation of the netcode, artificial intelligence of non-player drivers, and physics. Additionally I worked partially on the graphics and system integration.
+
+The netcode architecture is client-server, where one user acts as a host to other players. Players can collide with each other in real time using simple circle-circle physics intersection. Additionally, non-player drivers use a process similar to boids in order to make decisions about how to follow the road. These decisions then simulate inputs for the AI driver so that it has no speed advantage over players.
