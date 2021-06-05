@@ -37,4 +37,15 @@ for (elem of elems) {
 function enable_darkmode() {
 	let root = document.documentElement;
 	root.classList.toggle("dark-mode");
+	let enabled = root.classList.contains("dark-mode");
+	if (enabled) {
+		window.localStorage.setItem("darkmode", true);
+	} else {
+		window.localStorage.removeItem("darkmode");
+	}
+}
+
+let darkmode = window.localStorage.getItem("darkmode");
+if (darkmode != null && darkmode) {
+	enable_darkmode();
 }
