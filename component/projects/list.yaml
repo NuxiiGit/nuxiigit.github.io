@@ -66,3 +66,6 @@ projects:
    end: 2017
    languages:
     - "Visual Basic .NET"
+   roles:
+    - Research
+    - Development
