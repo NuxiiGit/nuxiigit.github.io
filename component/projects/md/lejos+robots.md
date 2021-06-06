@@ -1,4 +1,4 @@
-LeJOS Robots created for following paths, avoiding obstacles and mapping the shortest path through a maze.
+LeJOS Robots designed to follow paths, avoid obstacles and map the shortest path through a maze.
 
 <div class="centre">
 	<video width="auto" height="320" controls>
