@@ -7,7 +7,6 @@ This was a research project that presents an application for editing, traversing
  - Saving and loading graphs as a special data format
  - Exporting graphs as `.PNG` images
 
-![A screenshot showcasing various features of the application](/image/figures/graphing-1.png)
-Other images:
- - [shortest path between two vertices](/image/figures/graphing-2.png)
- - [a graph exported as a `.PNG` image](/image/figures/graphing-3.png)
+<div class="centre"><%= figure("/image/figures/graphing-1.png", "User interface", width: 640) %></div>
+<div class="centre"><%= figure("/image/figures/graphing-2.png", "Shortest path between two vertices", width: 640) %></div>
+<div class="centre"><%= figure("/image/figures/graphing-3.png", "Exporting a graph as a <code>.PNG</code> image", width: 640) %></div>

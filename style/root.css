@@ -270,6 +270,10 @@ code, code *, span.tex, div.tex {
 	font-family : var(--font-mono);
 }
 
+.inline {
+	display : inline-block;
+}
+
 .tex {
 	white-space : pre;
 }
@@ -311,10 +315,15 @@ p.justify {
 	text-indent : 2em;
 }
 
-.justify > p > img,
-.justify > p + div.centre {
+.justify > div.centre {
 	display : block;
-	margin : 10px auto;
+	margin-top : 10px;
+	margin-left : auto;
+	margin-right : auto;
+}
+
+.justify > div.centre + div.centre {
+	margin-top : 30px;
 }
 
 .justify > table {

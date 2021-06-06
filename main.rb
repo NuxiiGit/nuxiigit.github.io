@@ -20,6 +20,21 @@ def read(path)
 end
 
 ##
+# A function that returns the HTML code corresponding to a figure.
+def figure(content, caption, ref: nil, width: :auto, height: :auto, type: :image)
+    width = (width.is_a? String) ? width : "#{width}px"
+    height = (height.is_a? String) ? height : "#{height}px"
+    out = case type
+        when :image then "<img width=\"#{width}\" height=\"#{height}\" alt=\"#{caption}\" src=\"#{content}\" />"
+        when :video then "<video width=\"#{width}\" height=\"#{height}\" controls><source src=\"#{content}\" type=\"video/webm\"></video>"
+        when :text then "<div style=\"width : #{width}; height : #{height};\">#{content}</div>"
+        else "[invalid figure]"
+    end
+    num = ref == nil ? "" : "<b>Figure #{ref}.</b> "
+    "<div class=\"inline\">#{out}<br><div class=\"centre\">#{num}#{caption}</div></div>"
+end
+
+##
 # Helper function for simply writing a string to a file.
 def write(path, page)
     abspath = "./content/" + path
