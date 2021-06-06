@@ -3,6 +3,6 @@ My homepage and portfolio site. Currently I host [social media links](/content/c
 The website also offers the ability to change the theme by clicking the lightbulb symbol on the sidebar.
 
 <div class="centre">
-	<img width="320" alt="Dark theme" src="/image/figures/website-dark.png" />
-	<img width="320" alt="Light theme" src="/image/figures/website-light.png" />
+	<%= figure("/image/figures/website-dark.png", caption: "Dark theme", width: 320) %>
+	<%= figure("/image/figures/website-light.png", caption: "Light theme", width: 320) %>
 </div>

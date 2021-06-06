@@ -21,7 +21,7 @@ end
 
 ##
 # A function that returns the HTML code corresponding to a figure.
-def figure(content, caption, ref: nil, width: :auto, height: :auto, type: :image)
+def figure(content, caption: "", ref: nil, width: :auto, height: :auto, type: :image)
     width = (width.is_a? String) ? width : "#{width}px"
     height = (height.is_a? String) ? height : "#{height}px"
     out = case type
@@ -30,8 +30,9 @@ def figure(content, caption, ref: nil, width: :auto, height: :auto, type: :image
         when :text then "<div style=\"width : #{width}; height : #{height};\">#{content}</div>"
         else "[invalid figure]"
     end
-    num = ref == nil ? "" : "<b>Figure #{ref}.</b> "
-    "<div class=\"inline\">#{out}<br><div class=\"centre\">#{num}#{caption}</div></div>"
+    num = (ref == nil) ? "" : "<b>Figure #{ref}.</b> "
+    cap = (num == "" and caption == "") ? "" : "<br><div class=\"centre\">#{num}#{caption}</div>"
+    "<div class=\"inline\">#{out}#{cap}</div>"
 end
 
 ##
