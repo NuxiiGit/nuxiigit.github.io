@@ -297,7 +297,13 @@ p.justify {
 	text-align : justify;
 }
 
+.justify {
+	margin-top : 10px;
+	margin-bottom : 10px;
+}
+
 .justify > p {
+	margin-top : 0px;
 	margin-bottom : 0px;
 	text-align : justify;
 }
@@ -306,12 +312,9 @@ p.justify {
 	display : none;
 }
 
-.justify > br + p {
-	text-indent : 2em;
-}
-
+.justify > .centre + p,
+.justify > br + p,
 .justify > p + p {
-	margin-top : 0px;
 	text-indent : 2em;
 }
 
