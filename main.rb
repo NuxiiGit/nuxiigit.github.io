@@ -25,7 +25,7 @@ def figure(content, caption: "", ref: nil, width: :auto, height: :auto, type: :i
     width = (width.is_a? String) ? width : "#{width}px"
     height = (height.is_a? String) ? height : "#{height}px"
     out = case type
-        when :image then "<img width=\"#{width}\" height=\"#{height}\" alt=\"#{caption}\" src=\"#{content}\" />"
+        when :image then "<a href=\"#{content}\" target=\"_blank\" title=\"enlarge image\"><img width=\"#{width}\" height=\"#{height}\" alt=\"#{caption}\" src=\"#{content}\" /></a>"
         when :video then "<video width=\"#{width}\" height=\"#{height}\" controls><source src=\"#{content}\" type=\"video/webm\"></video>"
         when :text then "<div style=\"width : #{width}; height : #{height};\">#{content}</div>"
         else "[invalid figure]"
