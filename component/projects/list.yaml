@@ -61,7 +61,8 @@ projects:
    end: 2019
    languages:
     - "Visual Basic .NET"
- - name: dream-diagram
+ - name: "Dream Diagram"
+   alias: dream-diagram
    begin: 2016
    end: 2017
    languages:

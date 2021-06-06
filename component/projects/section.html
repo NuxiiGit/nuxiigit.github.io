@@ -1,6 +1,7 @@
 <% list.each do |x| %>
 	<% name = x["name"] %>
-	<% id = convert_id name %>
+	<% alias_ = (x.key? "alias") ? x["alias"] : name %>
+	<% id = convert_id alias_ %>
 	<div class="collapsible">
 		<input id="<%= id %>" class="toggle" type="checkbox">
 		<label for="<%= id %>">
@@ -11,7 +12,7 @@
 					<a href="<%= x["website"] %>"><%= stringify name %></a>
 				<% end %>
 			<% else %>
-				<a href="<%= $urls["github"] %>/<%= name %>"><%= stringify name %></a>
+				<a href="<%= $urls["github"] %>/<%= alias_ %>"><%= stringify name %></a>
 			<% end %>
 			<% if x.key? "begin" or x.key? "end" %>
 				(<% if x.key? "begin" %><%= x["begin"] %>-<% end %><%= (x.key? "end") ? x["end"] : "present" %>)
@@ -34,7 +35,7 @@
 		</label>
 		<div class="collapsible-content">
 			<div class="justify">
-				<%= render_project_page id %>
+				<%= render_project_page(id) %>
 			</div>
 		</div>
 	</div>

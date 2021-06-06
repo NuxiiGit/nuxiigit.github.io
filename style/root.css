@@ -322,8 +322,8 @@ p.justify {
 	margin-right : auto;
 }
 
-.justify > div.centre + div.centre {
-	margin-top : 30px;
+.justify > div.centre > div {
+	padding : 15px;
 }
 
 .justify > table {

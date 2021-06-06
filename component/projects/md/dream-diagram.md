@@ -9,4 +9,4 @@ This was a research project that presents an application for editing, traversing
 
 <div class="centre"><%= figure("/image/figures/graphing-1.png", caption: "User interface", width: 640) %></div>
 <div class="centre"><%= figure("/image/figures/graphing-2.png", caption: "Shortest path between two vertices", width: 640) %></div>
-<div class="centre"><%= figure("/image/figures/graphing-3.png", caption: "Exporting a graph as a <code>.PNG</code> image", width: 640) %></div>
+<div class="centre"><%= figure("/image/figures/graphing-3.png", caption: "Exporting a graph as a <code>.png</code> image", width: 640) %></div>
