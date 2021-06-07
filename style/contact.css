@@ -6,13 +6,18 @@ body {
 	width : 15em;
 	--angle : -2deg;
 }
-
+/*
 .box {
 	width : 200px;
 	padding : 50px 10px;
 }
-
+*/
 .contact {
-	padding : 10px;
+	padding : 10px 5px;
+	flex-basis : 30%;
 }
 
+#content > div.flex {
+	margin : 0px auto;
+	width : 70%;
+}
