@@ -209,7 +209,7 @@ def markup(src, index=false)
             end
         end
         src = src.gsub pattern, <<~HTML
-            <<%= header_tag_md_to_html("\\1") %> id="<%= convert_id("\\2") -%>"><a href="#<%= convert_id("\\2") -%>">\\1</a> \\2</<%= header_tag_md_to_html("\\1") %>>
+            <<%= header_tag_md_to_html("\\1") %> id="<%= convert_id("\\2") -%>"><a href="#<%= convert_id("\\2") -%>"><%= "§" * "\\1".length %></a> \\2</<%= header_tag_md_to_html("\\1") %>>
         HTML
         src = template src, binding
         src = CommonMarker.render_html src, [:UNSAFE, :FOOTNOTES], [:tagfilter, :strikethrough, :table]
