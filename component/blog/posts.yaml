@@ -1,3 +1,6 @@
+- title: "A Practical Approach to Enriching the Standard Library of Gamemaker Studio 2"
+  short-title: "GML Library Extensions"
+  desc: "By exploiting an undocumented feature of macros in GameMaker Language (GML), calls to standard library functions can be intercepted in order to help implement missing features."
 - title: "Misusing Macros to Create Syntax Extensions in GameMaker Studio 2"
   short-title: "GML Syntax Extensions"
   desc: "Using bad practices, careful design and creativity, macros can become a powerful feature for introducing new syntax into GameMaker Language (GML)."
@@ -5,6 +8,7 @@
       day: 16
       month: 12
       year: 2020
-- title: "Test Page"
+
 - title: "Ideas for a New High-level Systems Programming Language"
   short-title: "Ideas for Cosy"
+- title: "Test Page"

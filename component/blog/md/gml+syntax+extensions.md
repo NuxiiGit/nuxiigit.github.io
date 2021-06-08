@@ -130,9 +130,9 @@ Although creating aliases for long functions is already quite useful, the next s
 One little known feature of macros is the ability to override built-in functions with a custom implementation. A particularly useful case for this is overriding `show_debug_message` so that it writes to a log file, rather than to the IDE console window. The process of logging debug messages to a file (or leaving "breadcrumbs") is very important for debugging issues encountered by users. This behaviour can be achieved by creating a macro where the function you want to override is the name of the macro:
 
 ```gmlext
-#macro show_debug_message __overrides_show_debug_message
+#macro show_debug_message overrides_show_debug_message
 
-function __overrides_show_debug_message(_str) {
+function overrides_show_debug_message(_str) {
   var file = file_text_open_append("game.log");
   file_text_write_string(file, _str);
   file_text_writeln(file);
@@ -140,7 +140,7 @@ function __overrides_show_debug_message(_str) {
 }
 ```
 
-With this macro, any occurrences of `show_debug_message` will be replaced with `__overrides_show_debug_message`. This results in all debug messages being written to an external file named `"game.log"`. However, be warned! Since all occurrences of `show_debug_message` are now replaced with the overriding function, any instance of `show_debug_message` inside the body of that function will cause it to enter an infinite loop (if not handled correctly). This is not immediately obvious, especially if the macro definition is in a separate file. For this reason, it's a pitfall to be aware of.
+With this macro, any occurrences of `show_debug_message` will be replaced with `overrides_show_debug_message`. This results in all debug messages being written to an external file named `"game.log"`. However, be warned! Since all occurrences of `show_debug_message` are now replaced with the overriding function, any instance of `show_debug_message` inside the body of that function will cause it to enter an infinite loop (if not handled correctly). This is not immediately obvious, especially if the macro definition is in a separate file. For this reason, it's a pitfall to be aware of.
 
 This same approach can be applied to other parts of GML, such as with built-in variables or constants. For example, the default colour for the literal, `c_red`, is very ugly, but it can be overridden to a [better shade](https://www.color-hex.com/color/d15864) using a macro:
 
