@@ -263,7 +263,6 @@ a:active {
 	border-radius : 4px;
 	background-color : var(--background-2);
 	padding : 0 4px;
-	word-break : break-all;
 	/*border-bottom : 1px dashed var(--foreground);*/
 }
 

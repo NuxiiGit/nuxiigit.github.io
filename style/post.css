@@ -41,3 +41,7 @@
 .footnote-ref::after {
 	content : "]";
 }
+
+.footnotes code {
+	word-break : break-all;
+}
