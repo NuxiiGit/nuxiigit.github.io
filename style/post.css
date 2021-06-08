@@ -9,3 +9,35 @@
 .date {
 	font-family : var(--font-mono);
 }
+
+.footnotes ol {
+	list-style : none;
+	margin-left : 0px;
+	counter-reset : footnote-count;
+}
+
+.footnotes li {
+	counter-increment : footnote-count;
+	margin-top : 1em;
+}
+
+.footnotes li::before {
+	content : "[" counter(footnote-count) "]";
+}
+
+.footnotes li p {
+	display : inline;
+}
+
+.footnote-ref {
+	vertical-align : baseline;
+	font-size : 1em;
+}
+
+.footnote-ref::before {
+	content : " [";
+}
+
+.footnote-ref::after {
+	content : "]";
+}
