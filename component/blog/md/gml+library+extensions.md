@@ -35,7 +35,7 @@ In some ways this is superior compared to the previous approach, because it does
 
 ## Implementation Details
 
-As shown in a [previous blog post](./gml+syntax+extensions.html), built-in functions and variables can be overridden using macros. However, this had limited applications because it made the original reference to the built-in function unreachable. As a result, the original behaviour of the function was lost:
+As shown in a [previous blog post](./gml+syntax+extensions.html), built-in functions and variables can be overridden using macros. However, this had limited applications because it caused the original reference to the built-in function to become unreachable. As a result, the original behaviour of the function was lost:
 
 ```gml
 #macro show_debug_message overrides_show_debug_message
@@ -127,7 +127,7 @@ A few experiments can be found on [GitHub](https://github.com/NuxiiGit/macro-hac
 
 All extensions have seen practical use in projects I've been a part of. Most importantly, `display_set_gui_position` lifts a restriction of the current GUI functions, requiring that either the offset *or* scale of the GUI could be set, but not both simultaneously[^guif]. In conjunction with `application_set_position_fixed`, these extensions allow for low-resolution games to scale "pixel-perfectly," whilst also enabling a high-resolution GUI. An example of this is shown in Figure 1.
 
-Also included in the repository is a singleton system, which overrides the built-in instance functions in order to prevent multiple singletons from being created, and to offer deactivation immunity to system objects. This can help reduce the likelihood of bugs related to system objects from occurring.
+Also included in the repository is a singleton system, which overrides the built-in instance functions in order to prevent multiple singletons of the same type from being created, and to offer deactivation immunity to system objects. This can help reduce the likelihood of bugs related to system objects from occurring.
 
 # Summary
 
