@@ -3,8 +3,7 @@ body {
 }
 
 #avatar {
-	width : 15em;
-	--angle : -2deg;
+	width : 7em;
 }
 /*
 .box {
@@ -13,11 +12,10 @@ body {
 }
 */
 .contact {
-	padding : 10px 5px;
-	flex-basis : 30%;
+	padding : 1em 1em;
 }
 
 #content > div.flex {
 	margin : 0px auto;
-	width : 70%;
+	width : 50%;
 }
