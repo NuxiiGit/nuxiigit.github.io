@@ -9,10 +9,10 @@
 				<% if x["website"] == nil %>
 					<%= stringify name %>
 				<% else %>
-					<a href="<%= x["website"] %>"><%= stringify name %></a>
+					<a href="<%= x["website"] %>" target="_blank"><%= stringify name %></a>
 				<% end %>
 			<% else %>
-				<a href="<%= $urls["github"] %>/<%= alias_ %>"><%= stringify name %></a>
+				<a href="<%= $urls["github"] %>/<%= alias_ %>" target="_blank"><%= stringify name %></a>
 			<% end %>
 			<% if x.key? "begin" or x.key? "end" %>
 				(<% if x.key? "begin" %><%= x["begin"] %>-<% end %><%= (x.key? "end") ? x["end"] : "present" %>)
