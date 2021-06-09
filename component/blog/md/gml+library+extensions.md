@@ -116,7 +116,7 @@ Additionally, since many auto complete engines sort underscores alphabetically a
 
 # Experiments
 
-A few experiments have been created that extend the GameMaker standard library, and can be found on [GitHub](https://github.com/NuxiiGit/macro-hacks). A list of functions that have been added include:
+A few experiments have been created that extend the GameMaker standard library, and can be found on [GitHub](https://github.com/NuxiiGit/macro-hacks/tree/master/gml-library-extensions). A list of functions that have been added include:
 
  - `application_set_position` -- Enables setting an exact region to render the application surface.
  - `application_set_position_fixed` -- Similar to `application_set_position`, except preserving aspect ratio.
