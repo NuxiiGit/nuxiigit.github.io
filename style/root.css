@@ -312,7 +312,6 @@ p.justify {
 	display : none;
 }
 
-.justify > .centre + p,
 .justify > br + p,
 .justify > p + p {
 	text-indent : 2em;
