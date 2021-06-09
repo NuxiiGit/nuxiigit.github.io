@@ -118,14 +118,14 @@ Note: since many auto-complete engines order underscores after letters alphabeti
 
 <div class="centre"><%= figure("/image/figures/pixel-perfect.png", ref: 1, caption: "Pixel-perfect scaling with a high-resolution GUI layer", width: 640) %></div>
 
-A few experiments have been created that extend the GameMaker standard library, and can be found on [GitHub](https://github.com/NuxiiGit/macro-hacks/tree/master/gml-library-extensions). A list of functions that have been added include:
+A few experiments can be found on [GitHub](https://github.com/NuxiiGit/macro-hacks/tree/master/gml-library-extensions) that extend the GameMaker standard library. A list of functions that have been implemented include:
 
  - `application_set_position` — Enables setting an exact region to render the application surface.
  - `application_set_position_fixed` — Similar to `application_set_position`, except preserving aspect ratio.
  - `display_set_gui_position` — Enables setting an exact region and scale to draw the GUI in.
  - `network_get_config` — Enables getting network configurations set by the user.
 
-All extensions have seen practical use in projects I've been a part of. Most importantly, `display_set_gui_position` lifts a restriction of the current GUI functions where only an offset *or* scale could be set, but not both simultaneously[^guif]. In conjunction with `application_set_position_fixed`, these extensions allow for low-resolution games to scale "pixel-perfectly," whilst also enabling a high-resolution GUI. An example of this is shown in Figure 1.
+All extensions have seen practical use in projects I've been a part of. Most importantly, `display_set_gui_position` lifts a restriction of the current GUI functions, requiring that either the offset *or* scale of the GUI could be set, but not both simultaneously[^guif]. In conjunction with `application_set_position_fixed`, these extensions allow for low-resolution games to scale "pixel-perfectly," whilst also enabling a high-resolution GUI. An example of this is shown in Figure 1.
 
 Also included in the repository is a singleton system, which overrides the built-in instance functions in order to prevent multiple singletons from being created, and to offer deactivation immunity to system objects. This can help reduce the likelihood of bugs related to system objects from occurring.
 
