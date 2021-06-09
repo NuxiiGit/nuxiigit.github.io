@@ -382,21 +382,21 @@ This post has discussed various macro pitfalls and how they can be utilised to c
 # References
 
 [^macro]: <%= ref({
-    :author => "The GCC Team",
-    :title => "3.10 - Macro Pitfalls",
-    :booktitle => "The C Processor",
-    :publisher => "Free Software Foundation, Inc",
-    :year => "2020",
-    :url => "https://gcc.gnu.org/onlinedocs/cpp/Macro-Pitfalls.html",
-    :visitedon => "2021-03-02"
+	:author => "The GCC Team",
+	:title => "3.10 - Macro Pitfalls",
+	:booktitle => "The C Processor",
+	:publisher => "Free Software Foundation, Inc",
+	:year => "2020",
+	:url => "https://gcc.gnu.org/onlinedocs/cpp/Macro-Pitfalls.html",
+	:visitedon => "2021-03-02"
 }) %>
 
 [^comma]: <%= ref({
-    :author => "MDN Contributers",
-    :title => "Comma Operator (,)",
-    :booktitle => "JavaScript Reference",
-    :publisher => "Mozilla",
-    :year => "2020",
-    :url => "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator",
-    :visitedon => "2021-03-02"
+	:author => "MDN Contributers",
+	:title => "Comma Operator (,)",
+	:booktitle => "JavaScript Reference",
+	:publisher => "Mozilla",
+	:year => "2020",
+	:url => "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator",
+	:visitedon => "2021-03-02"
 }) %>
