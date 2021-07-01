@@ -1,7 +1,7 @@
 projects:
  - name: Catspeak
    website: https://github.com/NuxiiGit/catspeak
-   begin: 2021
+   end: 2021
    languages:
     - "GameMaker Language"
     - Ruby
