@@ -6,6 +6,7 @@ require "fileutils"
 load "rouge/cosy.rb"
 load "rouge/gml.rb"
 load "rouge/catspeak.rb"
+load "rouge/katscript.rb"
 
 ##
 # Helper function for reading files at this location.
@@ -171,6 +172,7 @@ def markup(src, index=false)
                     when "gml" then Gml.new
                     when "gmlext" then GmlExt.new
                     when "cats" then Catspeak.new
+                    when "kats" then KatScript.new
                     else Rouge::Lexer.find type
                 end
                 if lex == nil
