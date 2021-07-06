@@ -5,6 +5,7 @@ require "yaml"
 require "fileutils"
 load "rouge/cosy.rb"
 load "rouge/gml.rb"
+load "rouge/catspeak.rb"
 
 ##
 # Helper function for reading files at this location.
@@ -165,14 +166,12 @@ def markup(src, index=false)
             if (m = html.match /```(.*)\n((?:.|\n)*?)```/)
                 type, code = m.captures
                 fmt = Rouge::Formatters::HTML.new
-                lex = if type == "cosy"
-                    Cosy.new
-                elsif type == "gml"
-                    Gml.new
-                elsif type == "gmlext"
-                    GmlExt.new
-                else
-                    Rouge::Lexer.find type
+                lex = case type
+                    when "cosy" then Cosy.new
+                    when "gml" then Gml.new
+                    when "gmlext" then GmlExt.new
+                    when "cats" then Catspeak.new
+                    else Rouge::Lexer.find type
                 end
                 if lex == nil
                     lex = Rouge::Lexers::PlainText.new
