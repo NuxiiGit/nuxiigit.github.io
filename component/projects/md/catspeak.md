@@ -2,6 +2,8 @@ Designed as a dual language for modding and configuration, Catspeak is a domain-
 
 Catspeak is implemented in GameMaker Language in order to be stable across many different platforms, and is designed be evaluated over multiple frames in order to avoid freezing the game. In order to achieve this, both the compiler and virtual machine use a flat execution model; that is, no recursive descent parsing or tree-walk interpreters. This enables Catspeak programs to be passively compiled, executed, and paused at any time. Despite this, it is still possible for Catspeak scripts to be compiled and evaluated eagerly within a single step if desired.
 
+Below are some example programs written in Catspeak:
+
 ```cats
 -- arrays and loops
 planets = [
@@ -16,7 +18,9 @@ while (i < n) {
   print planet -- Venus
   i = i + 1    -- Earth
 }              -- Mars
+```
 
+```cats
 -- structs
 position = {
   .x : 12

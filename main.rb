@@ -23,8 +23,8 @@ end
 ##
 # A function that returns the HTML code corresponding to a figure.
 def figure(content, caption: "", ref: nil, width: :auto, height: :auto, type: :image)
-    width = (width.is_a? String) ? width : "#{width}px"
-    height = (height.is_a? String) ? height : "#{height}px"
+    width = (width.is_a? String or width == :auto) ? width : "#{width}px"
+    height = (height.is_a? String or height == :auto) ? height : "#{height}px"
     out = case type
         when :image then "<a href=\"#{content}\" target=\"_blank\" title=\"enlarge image\"><img width=\"#{width}\" height=\"#{height}\" alt=\"#{caption}\" src=\"#{content}\" /></a>"
         when :video then "<video width=\"#{width}\" height=\"#{height}\" controls><source src=\"#{content}\" type=\"video/webm\"></video>"
