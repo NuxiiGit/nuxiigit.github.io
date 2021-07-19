@@ -1,4 +1,14 @@
 projects:
+ - name: "Witch Wanda"
+   website: https://github.com/NuxiiGit/witch-wanda
+   end: 2021
+   languages:
+    - "GameMaker Language"
+    - GLSL
+   roles:
+    - Technical Art
+    - Sound Design
+    - Development
  - name: Catspeak
    website: https://github.com/NuxiiGit/catspeak
    end: 2021
