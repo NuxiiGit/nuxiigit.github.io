@@ -79,8 +79,9 @@ div.collapsible:hover span[lang="r"] {
 	color : #198CE7;
 }
 
-div.collapsible:hover span[lang="c"] {
-	color : #555555;
+div.collapsible:hover span[lang="c"],
+div.collapsible:hover span[lang="glsl"] {
+	color : #999999;
 }
 
 div.collapsible:hover span[lang="c++"] {
