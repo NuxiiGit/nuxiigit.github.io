@@ -6,15 +6,16 @@ projects:
     - "GameMaker Language"
     - GLSL
    roles:
-    - Technical Art
-    - Sound Design
-    - Development
+    - "Technical Art"
+    - "Gameplay Programming"
  - name: Catspeak
    website: https://github.com/NuxiiGit/catspeak
    end: 2021
    languages:
     - "GameMaker Language"
     - Ruby
+   roles:
+    - "Compiler Development"
  - name: KatScript
    website: null
    begin: 2020
@@ -23,7 +24,7 @@ projects:
     - Rust
    roles:
     - Research
-    - Development
+    - "Compiler Development"
  - name: nuxiigit.github.io
    begin: 2018
    languages:
@@ -31,25 +32,36 @@ projects:
     - JavaScript
     - HTML
     - CSS
+   roles:
+    - "Web Development"
  - name: gml-prelude
    end: 2020
    languages:
     - "GameMaker Language"
+   roles:
+    - "Programming"
  - name: exp-solver
    end: 2020
    languages:
     - Python
+   roles:
+    - "Compiler Development"
  - name: undergrad-portfolio
    end: 2020
    languages:
     - Python
     - HTML
     - CSS
+   roles:
+    - "Web Development"
  - name: dot-edit
    begin: 2019
    end: 2020
    languages:
     - Haskell
+   roles:
+    - "Compiler Development"
+    - "Path Finding"
  - name: "Racing Game"
    website: null
    begin: 2019
@@ -77,6 +89,8 @@ projects:
    end: 2019
    languages:
     - "Visual Basic .NET"
+   roles:
+    - Programming
  - name: "Dream Diagram"
    alias: dream-diagram
    begin: 2016
@@ -85,4 +99,5 @@ projects:
     - "Visual Basic .NET"
    roles:
     - Research
-    - Development
+    - "Interface Design"
+    - "Path Finding"

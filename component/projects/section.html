@@ -17,11 +17,8 @@
 			<% if x.key? "begin" or x.key? "end" %>
 				(<% if x.key? "begin" %><%= x["begin"] %>-<% end %><%= (x.key? "end") ? x["end"] : "present" %>)
 			<% end %>
-			::
 			<% if x.key? "roles" %>
-				<%= x["roles"].join ", " %>
-			<% else %>
-				Development
+				:: <%= x["roles"].join ", " %>
 			<% end %>
 			<% if x.key? "languages" %>
 				<div class="right">
