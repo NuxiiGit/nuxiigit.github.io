@@ -74,7 +74,10 @@ body {
 
 hr {
 	border-style : none;
-	border-top : 1px solid var(--foreground);
+	border-bottom-width : thin;
+	border-bottom-style : solid;
+	border-image-slice : 1;
+	border-image-source : linear-gradient(to right, var(--background), var(--background), var(--foreground), var(--background), var(--background));
 }
 
 button.unstyled {

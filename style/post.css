@@ -11,10 +11,11 @@
 }
 
 .justify h2 {
+	position : -webkit-sticky;
 	position : sticky;
 	top : 0px;
 	background-color : var(--background);
-	border-bottom-width : 1px;
+	border-bottom-width : thin;
 	border-bottom-style : solid;
 	border-image-slice : 1;
 	border-image-source : linear-gradient(to right, var(--foreground), var(--background), var(--background), var(--background));
