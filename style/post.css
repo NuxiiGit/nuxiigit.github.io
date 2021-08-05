@@ -10,6 +10,16 @@
 	font-family : var(--font-mono);
 }
 
+.justify h2 {
+	position : sticky;
+	top : 0px;
+	background-color : var(--background);
+	border-bottom-width : 1px;
+	border-bottom-style : solid;
+	border-image-slice : 1;
+	border-image-source : linear-gradient(to right, var(--foreground), var(--background), var(--background), var(--background));
+}
+
 .footnotes ol {
 	list-style : none;
 	margin-left : 0px;
