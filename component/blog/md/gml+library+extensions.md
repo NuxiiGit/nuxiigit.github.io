@@ -1,6 +1,6 @@
 # Preface
 
-This post goes into detail about an undocumented feature of GML, originally brought to my attention by [Zach Reedy](https://twitter.com/datzach). Since this feature is undocumented, it wouldn't be wise to depend entirely on any topics discussed throughout this post, in case something changes in the future or there are inconsistencies between target platforms.
+This post goes into detail about an undocumented feature of GML, originally brought to my attention by [Zach&nbsp;Reedy](https://twitter.com/datzach). Since this feature is undocumented, it wouldn't be wise to depend entirely on any topics discussed throughout this post, in case something changes in the future or there are inconsistencies between target platforms.
 
 # The Problem
 
