@@ -8,14 +8,16 @@ body {
 
 #title {
 	margin-top : 0px;
+	letter-spacing : 0.5em;
+	font-size : 1.1em;
 }
 
 #title::after {
-	content : "nuxii";
+	content : "katsaii";
 }
 
 #title:hover::after {
-	content : "katsaii";
+	content : "nuxii";
 }
 
 #toolbar {
