@@ -6,11 +6,10 @@
 	--colour-accent : #6082b6;
 	--colour-accent-strawberry : #ff43a4;
 	--colour-accent-gold : coral;
-	--font-prop : 'Open Sans', 'Trebuchet MS', Helvetica, sans-serif;
-	--font-mono : 'Ubuntu Mono', Monaco, 'Lucida Console', monospace;
+	--font-prop : 'Open Sans', Arial, sans-serif;
+	--font-mono : Consolas, monospace;
 	--margin-left : 20%;
 	--margin-right : var(--margin-left);
-
 	--background : var(--colour-light);
 	--foreground : var(--colour-dark);
 	--background-2 : var(--colour-light-2);
