@@ -73,6 +73,7 @@ body {
 }
 
 hr {
+	border-width : 0;
 	border-style : none;
 	border-bottom-width : thin;
 	border-bottom-style : solid;
