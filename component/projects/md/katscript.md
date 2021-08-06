@@ -7,7 +7,7 @@ The following example shows how dynamic polymorphism is achieved using KatScript
 let IAnimal = fun(animal) {
   animal.name  = "Animal";
   animal.sound = "nothing";
-  animal.speak = fun<animal>() {
+  animal.speak = fun[animal]() {
     :println(animal.name ++ " says " ++ animal.sound);
   };
 };
