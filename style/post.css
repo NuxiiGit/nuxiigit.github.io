@@ -43,12 +43,13 @@
 	margin-top : 1em;
 }
 
-.footnotes li::before {
-	content : "[" counter(footnote-count) "]";
+.footnotes li p::before {
+	content : "[" counter(footnote-count) "] — ";
 }
 
 .footnotes li p {
-	display : inline;
+	display : block;
+	text-align : justify;
 }
 
 .footnote-ref {
@@ -64,6 +65,11 @@
 	content : "]";
 }
 
-.footnotes code {
+.footnote-ref a {
+	color : var(--foreground);
+}
+
+.footnotes .ref-url {
+	font-family : var(--font-mono);
 	word-break : break-all;
 }

@@ -121,7 +121,7 @@ def ref(bib)
         category << "Retrieved #{bib[:visitedon]}"
     end
     if bib.has_key? :url
-        category << "<a href=\"#{bib[:url]}\"><code>#{bib[:url]}</code></a>"
+        category << "<a class=\"ref-url\" href=\"#{bib[:url]}\">#{bib[:url]}</a>"
     end
     categories << category
     category = []
