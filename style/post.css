@@ -11,8 +11,8 @@
 }
 
 .justify h2 {
-	position : -webkit-sticky;
-	position : sticky;
+	/* position : -webkit-sticky; */
+	/* position : sticky; */
 	top : 0px;
 	background-color : var(--background);
 	border-width : 0;
