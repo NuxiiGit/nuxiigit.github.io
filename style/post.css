@@ -23,6 +23,15 @@
 	border-image-source : linear-gradient(to right, var(--foreground), var(--background), var(--background), var(--background));
 }
 
+.justify h2,
+.justify h3,
+.justify h4,
+.justify h5,
+.justify h6 {
+	white-space : nowrap;
+	overflow : hidden;
+}
+
 .footnotes ol {
 	list-style : none;
 	margin-left : 0px;
