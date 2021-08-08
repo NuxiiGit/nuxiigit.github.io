@@ -1,4 +1,11 @@
-Inspired by game development frameworks, this was a research project that presents a domain-specific language, compiler, and runtime system that abstracts over some important aspects of game development. The language features a strong functional programming framework that is used to express object-oriented and event-driven programming design patterns. The language is not designed to be state-of-the-art, and there is much that could be improved.
+Inspired by game development frameworks, this was a research project that presents a domain-specific language, compiler, and runtime system that abstracts over some important aspects of game development. The language features a strong functional programming framework that is used to express object-oriented and event-driven programming design patterns. The language is not designed to be state-of-the-art, and there is much that could be improved. Below are some demos made using the language:
+
+<div class="centre">
+	<%= figure("/video/life.webm", caption: "John Conway's Game of Life", height: 240, type: :video) %>
+	<%= figure("/video/breakout.webm", caption: "Atari Breakout", height: 240, type: :video) %>
+</div>
+
+<br>
 
 The language is expressive enough to represent common Object-Oriented patterns, such as dynamic polymorphism and open recursion. The following example shows a simple Class-like definition for a container that only allows natural numbers:
 
