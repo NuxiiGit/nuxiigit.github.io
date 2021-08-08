@@ -269,6 +269,11 @@ a:active {
 	/*border-bottom : 1px dashed var(--foreground);*/
 }
 
+:not(pre) > code,
+.long-word {
+	overflow-wrap : break-word;
+}
+
 code, code *, span.tex, div.tex {
 	font-family : var(--font-mono);
 }
@@ -309,6 +314,10 @@ p.justify {
 	margin-top : 0px;
 	margin-bottom : 0px;
 	text-align : justify;
+}
+
+p {
+	line-height : 1.5;
 }
 
 .justify > br {
