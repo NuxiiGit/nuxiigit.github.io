@@ -101,6 +101,16 @@ button.unstyled {
 	--angle : 0.5deg;
 }
 
+@keyframes keyframes-fade {
+	from {
+		background-color : var(--colour-accent-strawberry);
+	}
+}
+
+:target {
+	animation : keyframes-fade 0.5s;
+}
+
 @keyframes keyframes-wobble {
 	0% {
 		transform : rotate(0deg);
