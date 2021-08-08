@@ -401,7 +401,10 @@ table {
 }
 
 input[type='checkbox'] {
-	display : none;
+	display : inline;
+	position : absolute;
+	visibility : hidden;
+	/* display : none; */
 }
 
 input[type='checkbox'] + label {
