@@ -15,20 +15,20 @@ let Natural = fun() {
   let prv = { .number => 0 };
   let pub = { };
   -- populate the public interface
-  pub.get = fun<prv>() {
+  pub.get = fun[prv]() {
     ret prv.number;
   };
-  pub.set = fun<prv>(value) {
+  pub.set = fun[prv](value) {
     let n = :float(value);
     if n < 0 {
       :error(n ++ " must be >= 0");
     }
     prv.number = n;
-  }
-  pub.inc = fun<pub>() {
+  };
+  pub.inc = fun[pub]() {
     -- open recursion on public `get` and `set` methods
     pub.set(pub.get() + 1);
-  }
+  };
   -- return the public interface
   ret pub;
 };
