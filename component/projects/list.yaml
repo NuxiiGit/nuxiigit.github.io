@@ -9,7 +9,7 @@ projects:
     - "Technical Art"
     - "Gameplay Programming"
  - name: Catspeak
-   website: https://github.com/NuxiiGit/catspeak
+   website: https://github.com/NuxiiGit/catspeak-lang
    end: 2021
    languages:
     - "GameMaker Language"
@@ -17,7 +17,7 @@ projects:
    roles:
     - "Compiler Development"
  - name: KatScript
-   website: null
+   website: https://github.com/NuxiiGit/katscript-lang
    begin: 2020
    end: 2021
    languages:
