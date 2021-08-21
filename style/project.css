@@ -5,6 +5,7 @@ body {
 
 label, label * {
 	font-family : var(--font-mono);
+	cursor : pointer;
 }
 
 #avatar-top {

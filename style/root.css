@@ -256,6 +256,7 @@ a {
 	/* font-weight : bold; */
 	text-decoration : none;
 	transition : color 0.25s;
+	cursor : pointer;
 }
 
 a:hover {
