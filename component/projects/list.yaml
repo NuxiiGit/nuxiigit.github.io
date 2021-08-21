@@ -1,4 +1,11 @@
 projects:
+ - name: "Cosy"
+   website: null
+   begin: 2020
+   languages:
+    - Rust
+   roles:
+    - "Compiler Development"
  - name: "Witch Wanda"
    website: https://github.com/NuxiiGit/witch-wanda
    end: 2021
