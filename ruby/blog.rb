@@ -1,10 +1,10 @@
-$blog_post_layout = read "blog/post.html"
+$blog_post_layout = read("blog/post.html")
 
 ##
 # Renders a markdown page.
 def render_blog_page(name)
-    page = read "blog/md/" + name + ".md"
-    markup page
+    page = read("blog/md/#{name}.md")
+    markup(page)
 end
 
 ##
@@ -63,10 +63,10 @@ def render_date_mono(date)
     "#{day}-#{month}-#{year}"
 end
 
-posts = unmarshal_yaml read "blog/posts.yaml"
+posts = unmarshal_yaml(read("blog/posts.yaml"))
 posts = posts.sort do |x, y|
     cmp = 0
-    if x.key? "date" and y.key? "date"
+    if x.key?("date") and y.key?("date")
         xd = x["date"]
         yd = y["date"]
         cmp = xd["year"] <=> yd["year"]
@@ -76,28 +76,24 @@ posts = posts.sort do |x, y|
                 cmp = xd["day"] <=> yd["day"]
             end
         end
-    elsif x.key? "date"
+    elsif x.key?("date")
         cmp = -1
-    elsif y.key? "date"
+    elsif y.key?("date")
         cmp = 1
     end
     -cmp
 end
 vars = binding
-post_page = read "blog/posts.html"
-post_page = template post_page, vars
-write "blog/posts.html", post_page
+post_page = read("blog/posts.html")
+post_page = template(post_page, vars)
+write("blog/posts.html", post_page)
 posts.each do |info|
-    key = if info.key? "short-title"
-        "short-title"
-    else
-        "title"
-    end
-    id = convert_id info[key]
-    page = read "blog/md/" + id + ".md"
-    content = markup page
-    index = markup page, index=true
+    key = info.key?("short-title") ? "short-title" : "title"
+    id = convert_id(info[key])
+    page = read("blog/md/#{id}.md")
+    content = markup(page)
+    index = markup(page, index=true)
     vars = binding
-    post = template $blog_post_layout, vars
-    write "blog/post/" + id + ".html", post
+    post = template($blog_post_layout, vars)
+    write("blog/post/#{id}.html", post)
 end
