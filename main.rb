@@ -13,8 +13,8 @@ load "rouge/katscript.rb"
 def read(path)
     content = ""
     abspath = "./component/" + path
-    if File.file? abspath
-        content = File.read abspath, mode: "rb", encoding: "utf-8"
+    if File.file?(abspath)
+        content = File.read(abspath, mode: "rb", encoding: "utf-8")
     else
         puts "file does not exist " + abspath
     end
