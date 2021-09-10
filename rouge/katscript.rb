@@ -27,11 +27,11 @@ class KatScript < Rouge::RegexLexer
         rule %r/:\s*[*\/\\!~&+%|^<>=?\-]*/, Name::Builtin
         rule %r/[A-Za-z_]+[A-Za-z0-9_]*/ do |m|
             chunk = m[0]
-            if keyword_reserved.include? chunk
+            if keyword_reserved.include?(chunk)
                 token Keyword
-            elsif keyword_constant.include? chunk
+            elsif keyword_constant.include?(chunk)
                 token Keyword::Constant
-            elsif chunk.match? /^[A-Z][A-Za-z0-9_]*$/
+            elsif chunk.match?(/^[A-Z][A-Za-z0-9_]*$/)
                 token Keyword::Type
             else
                 token Name::Variable

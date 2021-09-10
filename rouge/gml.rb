@@ -1,15 +1,15 @@
 $gml_names = []
-content = File.read "./rouge/gml_builtins.txt"
-content.scan /^([A-Za-z0-9_]+)(.*)$/ do |x|
+content = File.read("./rouge/gml_builtins.txt")
+content.scan(/^([A-Za-z0-9_]+)(.*)$/) do |x|
     ident = x[0]
-    kind = if x[1].include? "#"
+    kind = if x[1].include?("#")
         :const
-    elsif x[1].include? "&"
+    elsif x[1].include?("&")
         :err
     else
         :builtin
     end
-    $gml_names.append [ident, kind]
+    $gml_names.append([ident, kind])
 end
 $gml_constant = $gml_names
         .filter{|_, kind| kind == :const}
@@ -68,17 +68,17 @@ class Gml < Rouge::RegexLexer
         rule %r/[*\/!#@~&+%\\|^<>=?\-:.]/, Operator
         rule %r/([A-Za-z0-9_])*/ do |m|
             chunk = m[0]
-            if builtins.include? chunk
+            if builtins.include?(chunk)
                 token Name::Builtin
-            elsif keyword_reserved.include? chunk
+            elsif keyword_reserved.include?(chunk)
                 token Keyword
-            elsif keyword_constant.include? chunk
+            elsif keyword_constant.include?(chunk)
                 token Keyword::Constant
-            elsif generic_deleted.include? chunk
+            elsif generic_deleted.include?(chunk)
                 token Generic::Deleted
-            elsif chunk.match? /^[A-Z0-9_]*$/
+            elsif chunk.match?(/^[A-Z0-9_]*$/)
                 token Name::Variable::Magic
-            elsif chunk.match? /^[A-Z][A-Za-z0-9_]*$/
+            elsif chunk.match?(/^[A-Z][A-Za-z0-9_]*$/)
                 token Keyword::Type
             else
                 token Name::Variable

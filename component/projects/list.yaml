@@ -1,6 +1,6 @@
 projects:
  - name: "Cosy"
-   website: null
+   website: https://github.com/NuxiiGit/cosy-lang
    begin: 2020
    languages:
     - Rust

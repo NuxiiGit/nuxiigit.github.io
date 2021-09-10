@@ -25,9 +25,9 @@ class Catspeak < Rouge::RegexLexer
         rule %r/`[^`]*`/, Name::Variable::Magic
         rule %r/[A-Za-z_']+[A-Za-z0-9_']*/ do |m|
             chunk = m[0]
-            if keyword_reserved.include? chunk
+            if keyword_reserved.include?(chunk)
                 token Keyword
-            elsif keyword_constant.include? chunk
+            elsif keyword_constant.include?(chunk)
                 token Keyword::Constant
             else
                 token Name::Variable
