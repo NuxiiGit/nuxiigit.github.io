@@ -7,7 +7,7 @@ class Catspeak < Rouge::RegexLexer
     desc "The Catspeak Language"
 
     def keyword_reserved
-        Set.new %w(if else while break continue return print run)
+        Set.new %w(if else while for break continue return print run fun)
     end
 
     def keyword_constant

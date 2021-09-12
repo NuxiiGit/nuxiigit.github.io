@@ -5,7 +5,7 @@ Catspeak is implemented in GameMaker Language in order to be stable across many 
 Below are some example programs written in Catspeak:
 
 ```cats
--- arrays and loops
+-- arrays and while loops
 planets = [
   "Venus"
   "Earth"
@@ -27,4 +27,18 @@ position = {
   .y : -3
 }
 return : -position.x * position.{"y"} -- 36
+```
+
+```cats
+-- spicy foreach loops
+for [1, 2].[_] = outer {
+  for [3, 4].[_] = inner {
+    if (outer == 1) {
+      continue 2
+    }
+    result = inner * outer
+    break 2
+  }
+}
+return result
 ```
