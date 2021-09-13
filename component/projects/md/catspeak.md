@@ -5,28 +5,12 @@ Catspeak is implemented in GameMaker Language in order to be stable across many 
 Below are some example programs written in Catspeak:
 
 ```cats
--- arrays and while loops
-planets = [
-  "Venus"
-  "Earth"
-  "Mars"
-]
-n = 3
-i = 0
-while (i < n) {
-  planet = planets.[i]
-  print planet -- Venus
-  i = i + 1    -- Earth
-}              -- Mars
-```
-
-```cats
 -- structs
 position = {
   .x : 12
   .y : -3
 }
-return : -position.x * position.{"y"} -- 36
+print : -position.x * position.{"y"} -- 36
 ```
 
 ```cats
@@ -40,5 +24,26 @@ for [1, 2].[_] = outer {
     break 2
   }
 }
-return result
+print result -- 6
+```
+
+```cats
+-- functions
+factorial = fun {
+  n = arg.[0]
+  if (n <= 1) {
+    return 1
+  }
+  return : n * factorial (n - 1)
+}
+print : factorial 10 -- 3628800
+
+mean = fun {
+  count = 0
+  for arg.[_] = n {
+    count = count + n
+  }
+  return : count / get_length arg
+}
+print : mean 10 15 30 -- 18.3
 ```
