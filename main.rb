@@ -22,19 +22,24 @@ def read(path)
 end
 
 ##
+# Includes a caption under a HTML element.
+def caption(desc: "", ref: nil)
+    num = (ref == nil) ? "" : "<b>Figure #{ref}.</b> "
+    (num == "" and desc == "") ? "" : "<br><div class=\"centre\">#{num}#{desc}</div>"
+end
+
+##
 # A function that returns the HTML code corresponding to a figure.
-def figure(content, caption: "", ref: nil, width: :auto, height: :auto, type: :image)
+def figure(content, desc: "", ref: nil, width: :auto, height: :auto, type: :image)
     width = (width.is_a?(String) or width == :auto) ? width : "#{width}px"
     height = (height.is_a?(String) or height == :auto) ? height : "#{height}px"
     out = case type
-        when :image then "<a href=\"#{content}\" target=\"_blank\" title=\"enlarge image\"><img width=\"#{width}\" height=\"#{height}\" alt=\"#{caption}\" src=\"#{content}\" /></a>"
+        when :image then "<a href=\"#{content}\" target=\"_blank\" title=\"enlarge image\"><img width=\"#{width}\" height=\"#{height}\" alt=\"#{desc}\" src=\"#{content}\" /></a>"
         when :video then "<video width=\"#{width}\" height=\"#{height}\" controls><source src=\"#{content}\" type=\"video/webm\"></video>"
         when :text then "<div style=\"width : #{width}; height : #{height};\">#{content}</div>"
         else "[invalid figure]"
     end
-    num = (ref == nil) ? "" : "<b>Figure #{ref}.</b> "
-    cap = (num == "" and caption == "") ? "" : "<br><div class=\"centre\">#{num}#{caption}</div>"
-    "<div class=\"inline\">#{out}#{cap}</div>"
+    "<div class=\"inline\">#{out}#{caption(desc: desc, ref: ref)}</div>"
 end
 
 ##

@@ -14,6 +14,10 @@ class Catspeak < Rouge::RegexLexer
         Set.new %w(true false infinity NaN undefined)
     end
 
+    def keyword_builtin
+        Set.new %w(bool string real typeof length keys)
+    end
+
     state :root do
         rule %r/\s+/, Text::Whitespace
         rule %r/--[^\n]*/, Comment::Single
@@ -29,6 +33,8 @@ class Catspeak < Rouge::RegexLexer
                 token Keyword
             elsif keyword_constant.include?(chunk)
                 token Keyword::Constant
+            elsif keyword_builtin.include?(chunk)
+                token Name::Builtin
             else
                 token Name::Variable
             end

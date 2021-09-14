@@ -29,21 +29,21 @@ print result -- 6
 
 ```cats
 -- functions
-factorial = fun {
-  n = arg.[0]
+factorial = fun n {
   if (n <= 1) {
     return 1
   }
-  return : n * factorial (n - 1)
+  return : factorial (n - 1) * n
 }
 print : factorial 10 -- 3628800
 
+-- variadic functions
 mean = fun {
   count = 0
   for arg.[_] = n {
     count = count + n
   }
-  return : count / get_length arg
+  return : count / length arg
 }
 print : mean 10 15 30 -- 18.3
 ```

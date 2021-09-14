@@ -116,7 +116,7 @@ Note: since many auto-complete engines order underscores after letters alphabeti
 
 # Experiments
 
-<div class="centre"><%= figure("/image/figures/pixel-perfect.png", ref: 1, caption: "Pixel-perfect scaling with a high-resolution GUI layer", width: 640) %></div>
+<div class="centre"><%= figure("/image/figures/pixel-perfect.png", ref: 1, desc: "Pixel-perfect scaling with a high-resolution GUI layer", width: 640) %></div>
 
 A few experiments can be found on [GitHub](https://github.com/NuxiiGit/macro-hacks/tree/master/gml-library-extensions) that extend the GameMaker standard library. A list of functions that have been implemented include:
 
