@@ -1,7 +1,7 @@
 The result of a group project assignment where we were tasked to create a video game with networking and database connectivity. I was responsible for the implementation of the netcode, artificial intelligence of non-player drivers, and physics. Additionally I worked partially on the graphics and system integration.
 
 <div class="centre">
-	<%= figure("/video/racing-game.webm", desc: "Gameplay demo", width: 500, type: :video) %>
+	<%= figure("/video/racing-game.webm", desc: "Gameplay demo", width: 500, ref: 1, type: :video) %>
 </div>
 
 <br>
