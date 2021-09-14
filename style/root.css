@@ -365,6 +365,14 @@ br + .caption {
 	padding-bottom : 15px;
 }
 
+ul {
+	list-style-type : circle;
+}
+
+ol {
+	list-style-type : upper-roman;
+}
+
 .justify > table {
 	margin-left : auto;
 	margin-right : auto;
