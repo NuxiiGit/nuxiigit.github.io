@@ -23,9 +23,12 @@ end
 
 ##
 # Includes a caption under a HTML element.
-def caption(desc: "", ref: nil)
-    num = (ref == nil) ? "" : "<b>Figure #{ref}.</b> "
-    (num == "" and desc == "") ? "" : "<br><div class=\"centre\">#{num}#{desc}</div>"
+def caption(desc: "", ref: nil, type: :figure, newline: false)
+    type = type.to_s
+    type[0] = type[0].upcase
+    br = newline ? "<br>" : ""
+    num = (ref == nil) ? "" : "<b>#{type} #{ref}.</b> "
+    (num == "" and desc == "") ? "" : "#{br}<div class=\"centre caption\">#{num}#{desc}</div>"
 end
 
 ##
@@ -39,7 +42,7 @@ def figure(content, desc: "", ref: nil, width: :auto, height: :auto, type: :imag
         when :text then "<div style=\"width : #{width}; height : #{height};\">#{content}</div>"
         else "[invalid figure]"
     end
-    "<div class=\"inline\">#{out}#{caption(desc: desc, ref: ref)}</div>"
+    "<div class=\"inline figure\">#{out}#{caption(desc: desc, ref: ref, newline: true)}</div>"
 end
 
 ##

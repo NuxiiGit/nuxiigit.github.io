@@ -347,8 +347,22 @@ p {
 	margin-right : auto;
 }
 
-.justify > div.centre > div {
-	padding : 15px;
+.figure {
+	padding-left : 20px;
+	padding-right : 20px;
+}
+
+.caption {
+	padding-top : 15px;
+}
+
+div + .caption,
+video + .caption,
+img + .caption,
+pre + .caption,
+br + .caption {
+	padding-top : 0px;
+	padding-bottom : 15px;
 }
 
 .justify > table {
