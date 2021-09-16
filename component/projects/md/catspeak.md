@@ -9,7 +9,7 @@ factorial = fun n {
 }
 print : factorial 10 -- 3628800
 ```
-<%= caption(desc: 'Recursive functions', ref: 2, type: :listing) %>
+<%= caption(desc: 'Recursive functions', ref: 1, type: :listing) %>
 
 <br>
 
@@ -27,4 +27,4 @@ for [1, 2].[_] = outer {
 }
 print result -- 6
 ```
-<%= caption(desc: '"Foreach" loops', ref: 1, type: :listing) %>
+<%= caption(desc: '"Foreach" loops', ref: 2, type: :listing) %>
